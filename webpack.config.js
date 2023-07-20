@@ -21,6 +21,17 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                exclude: /node_modules/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "images",
+                    },
+                },
+            },
         ],
     },
     devServer: {
