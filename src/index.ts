@@ -19,13 +19,11 @@ const startCounter = (): void => {
     const counterElement: HTMLSpanElement = document.getElementById('counter');
     let seconds: number = 0;
 
-    const updateCounter = (): void => {
+    setInterval((): void => {
         seconds++;
         if (counterElement) {
             counterElement.textContent = seconds.toString();
         }
-    };
-
-    setInterval(updateCounter, 1000);
+    }, 1000);
 };
 
