@@ -1,4 +1,5 @@
-$gray: #1e1e1e;
+$gray: #2e2e2e;
+$lemonColor: #d9d900;
 
 body {
   font-family: sans-serif;
@@ -10,16 +11,31 @@ body {
   margin: 0;
 
   #app {
+    width: 400px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px #000;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: $gray;
 
     img.logo {
       align-self: center;
       width: 100px;
+    }
+
+    .counter-container {
+      padding: 3px;
+      border-radius: 5px;
+      background: $gray;
+      color: #fff;
+      #counter {
+        font-weight: bold;
+        color: $lemonColor;
+      }
     }
   }
 }
